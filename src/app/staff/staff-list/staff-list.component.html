@@ -1,0 +1,73 @@
+<div>
+<mat-card>
+  <mat-card-header class='gridCustom'>
+    <mat-card-title>
+      {{ pageTitle }}
+    </mat-card-title>
+    <button mat-flat-button color='' name='Add' class='bg-sky-700 text-slate-50' [routerLink]='["/staff", 0, "edit"]'>
+      <mat-icon matPreffix>add</mat-icon>&nbsp; Add
+    </button>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="hideSpin">
+      <mat-progress-spinner mode='indeterminate'>
+      </mat-progress-spinner>
+    </div>
+    <div class='flex flex-col' *ngIf="!hideSpin">
+      <mat-table [dataSource]='dataSource' matSort class='mat-elevation-z8 table-auto'>
+        <ng-container matColumnDef='id'>
+          <mat-header-cell *matHeaderCellDef class=' text-base'>ID</mat-header-cell>
+          <mat-cell *matCellDef='let st' hidden='true'>{{ st.id }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='dui'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class='text-base' color='primary'>DUI</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.dui }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='name'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>NAME</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.name }} {{ st.lastName }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='lastName'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>LAST NAME</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.lastName }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='department'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>DEPARTMENT</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.department }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='position'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>POSITION</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.position }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='type'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>CONTRACT TYPE</mat-header-cell>
+          <mat-cell *matCellDef='let st'>{{ st.type }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='salary'>
+          <mat-header-cell *matHeaderCellDef mat-sort-header class=' text-base'>SALARY</mat-header-cell>
+          <mat-cell *matCellDef='let st'>
+            {{ st.salary | currency: 'USD':'symbol':'1.2-2' }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef='Actions'>
+          <mat-header-cell *matHeaderCellDef class=''></mat-header-cell>
+          <mat-cell *matCellDef='let st'>
+            <button mat-mini-fab #tooltip='matTooltip' matTooltip='Edit Staff: {{st.id}}'
+              [routerLink]='["/staff", st.id, "edit"]' color='' class='bg-green-600 text-slate-50'>
+              <mat-icon matPrefix>edit</mat-icon>&nbsp;
+            </button>
+            <button mat-mini-fab #tooltip='matTooltip' (click)="deleteStaff(st.id)" matTooltip='Delete staff: {{st.id}}'
+              color='' class='bg-red-600 text-slate-50'>
+              <mat-icon matPrefix>delete</mat-icon>&nbsp;
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef='displayedColumns'></mat-header-row>
+        <mat-row *matRowDef='let row; columns: displayedColumns'></mat-row>
+      </mat-table>
+    </div>
+    <mat-paginator [pageSizeOptions]='[10, 15, 25, 50]' aria-label='Select page'>
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>
+</div>

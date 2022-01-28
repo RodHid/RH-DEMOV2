@@ -1,0 +1,9 @@
+.gridC{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+span{
+    align-content: center;
+    text-align: center;
+    font-size: 16px;
+}

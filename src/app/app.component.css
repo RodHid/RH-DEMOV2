@@ -1,0 +1,14 @@
+a.active{
+    background-color: #36439A;
+}
+.space{
+    flex: 1 1 auto;
+}
+.footer{
+    margin-top: 30px;
+    bottom: 0;
+    width: 100%;
+}
+.mat-button{
+    margin-left: 10px;
+}

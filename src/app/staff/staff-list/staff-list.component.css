@@ -1,0 +1,50 @@
+mat-card{
+    margin: 40px 40px;
+}
+.mat-table {
+      overflow-x: scroll;
+    }
+
+.mat-cell,
+.mat-header-cell {
+    display: table-cell;
+    padding: 15px 40px;
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mat-row,
+.mat-header-row {
+    display: table-row;
+}
+
+.mat-row:hover, .mat-row:nth-child(odd):hover{
+    background-color: rgba(161, 161, 170, 40%);
+}
+
+.mat-row:nth-child(odd){
+    background-color: #f4f4f5;
+}
+
+.mat-mini-fab{
+    border-radius: 20%;
+    margin: 0px 3px;
+}
+
+.mat-card-content{
+    margin-top: 20px;
+}
+
+.gridCustom{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5px;
+}
+.gridB{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+.mat-progress-spinner{
+    margin: 10% auto;
+}

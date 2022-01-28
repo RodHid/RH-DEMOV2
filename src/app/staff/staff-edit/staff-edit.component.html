@@ -1,0 +1,86 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ pageTitle }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]='myForm' autocomplete='off'>
+      <div class='grid md:grid-cols-2 gap-4'>
+        <input type='hidden' formControlName='id' />
+        <mat-form-field appearance='fill'>
+          <mat-label>DUI</mat-label>
+          <input type='text' matInput placeholder='12345678-9' formControlName='dui' name='dui' id='dui' required />
+          <mat-icon matSuffix>badge</mat-icon>
+          <mat-error id='idReq' *ngIf='myForm.get("dui")?.hasError("required")'>DUI is required</mat-error>
+          <mat-error id='idPat' *ngIf='myForm.get("dui")?.hasError("pattern")'>Pattern required: ########-#</mat-error>
+        </mat-form-field>
+      </div>
+      <div class='grid md:grid-cols-2 gap-4'>
+        <mat-form-field appearance='fill'>
+          <mat-label>Name</mat-label>
+          <input type='text' matInput formControlName='name' placeholder='John' name='name' id='name' required />
+          <mat-error id='nameReq' *ngIf='myForm.get("name")?.hasError("required")'>Name is required</mat-error>
+          <mat-error id='nameMax' *ngIf='myForm.get("name")?.hasError("maxlength")'>Max letters: 40</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance='fill'>
+          <mat-label>Last name</mat-label>
+          <input type='text' matInput placeholder='Doe' formControlName='lastName' name='lastName' id='lastName' required />
+          <mat-error id='lastReq' *ngIf='myForm.get("lastName")?.hasError("required")'>Last name is required</mat-error>
+          <mat-error id='lastMax' *ngIf='myForm.get("lastname")?.hasError("maxlength")'>Max letters: 40</mat-error>
+        </mat-form-field>
+      </div>
+      <div class='grid md:grid-cols-2 gap-4'>
+        <mat-form-field appearance='fill'>
+          <mat-label>Department</mat-label>
+          <mat-select [(value)]='selectedDept' formControlName='department' name='department' id='department' required>
+            <mat-option value='Human Resources'>Human Resources</mat-option>
+            <mat-option value='Development'>Development</mat-option>
+            <mat-option value='Marketing'>Marketing</mat-option>
+            <mat-option value='Management'>Management</mat-option>
+            <mat-option value='Sales'>Sales</mat-option>
+          </mat-select>
+          <mat-error id='deptReq' *ngIf='myForm.get("department")?.hasError("required")'>The Department is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance='fill'>
+          <mat-label>Position</mat-label>
+          <input type='text' matInput placeholder='Ex: Senior Developer' formControlName='position' name='position' id='position' required />
+          <mat-error id='posReq' *ngIf='myForm.get("position")?.hasError("required")'>The position is required</mat-error>
+          <mat-error id='posMax' *ngIf='myForm.get("position")?.hasError("maxlength")'>Max letters: 40</mat-error>
+        </mat-form-field>
+      </div>
+      <div class='grid md:grid-cols-2 gap-4'>
+        <mat-form-field appearance='fill'>
+          <mat-label>Contract type</mat-label>
+          <mat-select [(value)]='selectedType' formControlName='type' name='type' id='type' required>
+            <mat-option value='Full Time'>Full Time</mat-option>
+            <mat-option value='Part Time'>Part Time</mat-option>
+            <mat-option value='Temporary'>Temporary</mat-option>
+          </mat-select>
+          <mat-error id='typeReq' *ngIf='myForm.get("type")?.hasError("required")'>The contract type is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance='fill'>
+          <mat-label>Salary</mat-label>
+          <input type='number' matInput placeholder='400.00' formControlName='salary' name='salary' id='salary' required />
+          <mat-error id='salaryMin' *ngIf='myForm.get("salary")?.hasError("min")'>Min salary: 400</mat-error>
+          <mat-error id='salaryReq' *ngIf='myForm.get("salary")?.hasError("required")'>Salary is required</mat-error>
+          <mat-icon matPrefix>attach_money</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class='grid md:grid-cols-6 lg:grid-cols-6 gap-4'>
+        <button mat-flat-button class='text-slate-50 bg-blue-700' name='back' [routerLink]='["/staff"]'>
+          <mat-icon matPrefix>arrow_back_ios_new</mat-icon>&nbsp; Back
+        </button>
+        <button mat-flat-button class='text-slate-50 bg-green-700' name='Save' id='save' [disabled]='myForm.invalid || myForm.untouched' (click)='save()'>
+          <mat-icon matPrefix>save</mat-icon>&nbsp; Save
+        </button>
+        <button mat-flat-button name='clean' class='text-slate-50 bg-red-600' [disabled]='!myForm.dirty'>
+          <mat-icon matPrefix>cleaning_services</mat-icon>&nbsp; Clean
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

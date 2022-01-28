@@ -1,0 +1,231 @@
+{
+  "users": [
+    {
+      "id": "ZEDENGJP3D4M",
+      "email": "test0@cikume.com",
+      "password": "abc123"
+    },
+    {
+      "id": "N3A50OBOIZBR",
+      "email": "test1@cikume.com",
+      "password": "abc123"
+    },
+    {
+      "id": "YJ8KCY9N3IXP",
+      "email": "test2@cikume.com",
+      "password": "1234"
+    },
+    {
+      "id": "UEQUZYZ5HJ68",
+      "email": "test3@cikume.com",
+      "password": "abc123"
+    },
+    {
+      "id": "OHC5P7ICDPJU",
+      "email": "test4@cikume.com",
+      "password": "1234"
+    }
+  ],
+  "staff": [
+    {
+      "id": "TJ1U5396N9DW",
+      "dui": "32250105-8",
+      "name": "Clari",
+      "lastName": "Waller-Bridge",
+      "type": "Temporary",
+      "department": "Management",
+      "position": "Nurse Practicioner",
+      "salary": 1168.3
+    },
+    {
+      "id": "G9M7X5F40FSO",
+      "dui": "01261127-8",
+      "name": "Bonita",
+      "lastName": "Whellams",
+      "type": "Full Time",
+      "department": "Human Resources",
+      "position": "Web Developer III",
+      "salary": 2623.49
+    },
+    {
+      "id": "5K4M7K7LSK9L",
+      "dui": "19178897-0",
+      "name": "Paxton",
+      "lastName": "Conisbee",
+      "type": "Temporary",
+      "department": "Sales",
+      "position": "Accounting Assistant II",
+      "salary": 1906.77
+    },
+    {
+      "id": "ZA7YALCWXGXE",
+      "dui": "03760525-7",
+      "name": "Lulita",
+      "lastName": "Zorzutti",
+      "type": "Part Time",
+      "department": "Human Resources",
+      "position": "Nuclear Power Engineer",
+      "salary": 2672.42
+    },
+    {
+      "id": "1WCBWFQHBE6U",
+      "dui": "50504097-8",
+      "name": "Luce",
+      "lastName": "Currom",
+      "type": "Temporary",
+      "department": "Marketing",
+      "position": "Community Outreach Specialist",
+      "salary": 3747.34
+    },
+    {
+      "id": "8SQG9RE4LNBQ",
+      "dui": "51446757-4",
+      "name": "Stanly",
+      "lastName": "Heis",
+      "type": "Full Time",
+      "department": "Management",
+      "position": "VP Marketing",
+      "salary": 3447.3
+    },
+    {
+      "id": "J5GK308CQNNO",
+      "dui": "22370769-1",
+      "name": "Cyrille",
+      "lastName": "Sola",
+      "type": "Temporary",
+      "department": "Human Resources",
+      "position": "Chemical Engineer",
+      "salary": 3139.34
+    },
+    {
+      "id": "V7QGIZ144DKX",
+      "dui": "12240306-0",
+      "name": "Jasmine",
+      "lastName": "Petters",
+      "type": "Temporary",
+      "department": "Development",
+      "position": "Senior Developer",
+      "salary": 2832.41
+    },
+    {
+      "id": "P2IFX36R2RP2",
+      "dui": "48190348-8",
+      "name": "Dory",
+      "lastName": "Bisatt",
+      "type": "Part Time",
+      "department": "Sales",
+      "position": "Administrative Officer",
+      "salary": 1135.65
+    },
+    {
+      "id": "MLRU72YAAMNI",
+      "dui": "06230630-0",
+      "name": "Kate",
+      "lastName": "Seward",
+      "type": "Part Time",
+      "department": "Marketing",
+      "position": "Dental Hygienist",
+      "salary": 3567.3
+    },
+    {
+      "id": "PLM3GC1JMSYJ",
+      "dui": "11831672-7",
+      "name": "Philipa",
+      "lastName": "Prowse",
+      "type": "Full Time",
+      "department": "Marketing",
+      "position": "Executive Secretary",
+      "salary": 1918.81
+    },
+    {
+      "id": "UX0VXQZ37Z0Q",
+      "dui": "21679441-7",
+      "name": "Ike",
+      "lastName": "Franzen",
+      "type": "Temporary",
+      "department": "Human Resources",
+      "position": "Paralegal",
+      "salary": 782.86
+    },
+    {
+      "id": "H1XJLXWQHJDN",
+      "dui": "37642223-1",
+      "name": "Etan",
+      "lastName": "Udy",
+      "type": "Full Time",
+      "department": "Development",
+      "position": "Community Outreach Specialist",
+      "salary": 1487.07
+    },
+    {
+      "id": "SEHTTTJYUIA0",
+      "dui": "86387958-5",
+      "name": "Chancey",
+      "lastName": "Pallas",
+      "type": "Full Time",
+      "department": "Management",
+      "position": "Quality Engineer",
+      "salary": 3842.61
+    },
+    {
+      "id": "U7S2AIIPAZEL",
+      "dui": "43121198-6",
+      "name": "Wood",
+      "lastName": "Dod",
+      "type": "Part Time",
+      "department": "Development",
+      "position": "Assistant Manager",
+      "salary": 1556.22
+    },
+    {
+      "id": "Y3E6IFVNEKIO",
+      "dui": "28954381-8",
+      "name": "Demeter",
+      "lastName": "Jollye",
+      "type": "Full Time",
+      "department": "Development",
+      "position": "Financial Advisor",
+      "salary": 716.91
+    },
+    {
+      "id": "7A4BYH4DBASM",
+      "dui": "85971870-0",
+      "name": "Nelli",
+      "lastName": "Axup",
+      "type": "Full Time",
+      "department": "Development",
+      "position": "Sales Representative",
+      "salary": 2162.88
+    },
+    {
+      "id": "IJvH95c",
+      "dui": "00345678-1",
+      "name": "John",
+      "lastName": "Doe",
+      "type": "Temporary",
+      "department": "Development",
+      "position": "Dev",
+      "salary": 1200
+    },
+    {
+      "id": "-_0fgLz",
+      "dui": "05984983-3",
+      "name": "Rodrigo A",
+      "lastName": "Hidalgo",
+      "type": "Temporary",
+      "department": "Development",
+      "position": "Junior Dev",
+      "salary": 1200
+    },
+    {
+      "id": "aFle4TX",
+      "dui": "00345678-1",
+      "name": "John",
+      "lastName": "Doe",
+      "type": "Temporary",
+      "department": "Development",
+      "position": "Dev",
+      "salary": 1400
+    }
+  ]
+}
